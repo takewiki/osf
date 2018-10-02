@@ -35,3 +35,18 @@ file.postAddName <- function(baseName,sep="\\.",FlagText="处理后") {
   
    
 }
+
+#' 根据文件的全名来获取文件的直接上级路径
+#'
+#' @param fullFile 文件全名
+#'
+#' @return 返回值
+#' @export
+#'
+#' @examples file.getFullDir('./data-raw/file/test.aa.xlsx');
+file.getFullDir <- function(fullFile='./data-raw/file/test.aa.xlsx'){
+  res <- dirname(fullFile);
+  res <- paste(res,"/",sep = "");
+  return(res);
+  
+}
