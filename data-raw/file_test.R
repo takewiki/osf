@@ -7,3 +7,9 @@ file.replaceName(dirs,newShortNames = newFiles)->bbc;
 
 bbc;
 file.rename(dirs,bbc);
+
+#测试文件名添加名称
+
+library(osf);
+file.postAddName(c('aaa.xlsx','ccc.xlsx'));
+
