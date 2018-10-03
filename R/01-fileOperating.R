@@ -66,3 +66,18 @@ file.writeObject <- function(...,file="",append=TRUE) {
     cat(...,file = file,append = append);
     cat("\n",file=file,append = append);
 }
+
+#' 将字符向量元素的每一元素写成一行
+#'
+#' @param charVector  字符向量
+#' @param file  文件路径
+#'
+#' @return 返回值
+#' @export
+#'
+#' @examples file.writeCharEachLine(letters,file="aa.txt");
+file.writeCharEachLine <- function(charVector,file=""){
+  lapply(charVector,function(line){
+    file.writeObject(line,file = file);
+  })
+}
