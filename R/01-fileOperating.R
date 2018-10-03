@@ -50,3 +50,19 @@ file.getFullDir <- function(fullFile='./data-raw/file/test.aa.xlsx'){
   return(res);
   
 }
+
+
+#' 将R对象写入文件
+#'
+#' @param ...  列表对象,写入内容
+#' @param file  文件名
+#' @param append 是否追加到文件，默认为是
+#'
+#' @return 返回值，空
+#' @export
+#'
+#' @examples file.writeObject(letters,file="aa.txt")
+file.writeObject <- function(...,file="",append=TRUE) {
+    cat(...,file = file,append = append);
+    cat("\n",file=file,append = append);
+}
